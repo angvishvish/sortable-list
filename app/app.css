@@ -1,12 +1,33 @@
 /* app css stylesheet */
 
 .list-group > li.task:hover {
-  cursor: all-scroll;
+  cursor: -webkit-grab;
+}
+
+.list-group > li.task:active {
+  cursor: -webkit-grabbing;
+}
+
+.list-group > li.task.no-task:hover {
+  cursor: no-drop;
+}
+
+.list-group > li.task.no-task:active {
+  cursor: no-drop;
+}
+
+
+.list-group-item.high {
+  background-color: #d9534f;
+}
+
+.list-group-item.low {
+  background-color: #f0ad4e;
 }
 
 .list-group-item.task {
   transition-property: background;
-  transition-duration: .5s;
+  transition-duration: 250ms;
   transition-timing-function: linear;
 }
 
@@ -18,12 +39,8 @@
   background: #31b0d5;
 }
 
-.list-group-item.task:active {
-  background: #5cb85c;
-}
-
 .app {
   list-style: none;
   min-height: 40px;
-  background-color: white;
+  background-color: lightgray;
 }

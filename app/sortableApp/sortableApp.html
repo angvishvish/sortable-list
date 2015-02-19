@@ -8,12 +8,14 @@
           <ul class="list-inline" ng-model="docs">
             <li class="col-md-2" ng-repeat="day in docs">
                <h6>{{ day.categorie }} <span class="badge">{{ day.tasks.length }}</span></h6>
-               <ul class="list-group apps-container" ui-sortable="sortableOptions" ng-model="day.tasks">
-                 <li class="list-group-item task app" ng-repeat="task in day.tasks">
-                    {{ task.title }}
+               <ul class="list-group apps-container"
+                   ui-sortable="sortableOptions"
+                   ng-model="day.tasks">
+                 <li class="list-group-item task app {{ task.importance }}"
+                     ng-repeat="task in day.tasks">{{ task.title }}
                  </li>
-                 <li class="list-group-item task app" ng-if="day.tasks.length === 0">
-                    No tasks
+                 <li class="list-group-item task app no-task"
+                     ng-if="day.tasks.length === 0">No tasks
                  </li>
                </ul>
             </li>
