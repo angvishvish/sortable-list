@@ -14,22 +14,13 @@ angular.module('angularApp.sortableApp', [
 
 .controller(
   'sortableAppCtrl',[
-  '$scope',
-  function($scope) {
+  '$scope', '$http',
+  function($scope, $http) {
 
     // create the list first
-    var tmpList = [];
-    for (var i = 1; i <= 5; i++){
-      tmpList.push({
-        number: i,
-        value: i
-      });
-    }
 
-    $scope.list = tmpList;
-
-    $scope.sortableOptions = {
-
-    };
+    $http.get('sortableApp/sortableJson.json').success(function(data) {
+       $scope.list = data;
+    });
   }
 ]);

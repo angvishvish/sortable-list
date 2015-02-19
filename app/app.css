@@ -3,3 +3,18 @@
 .list-group > li:hover {
   cursor: all-scroll;
 }
+
+.list-group-item {
+  background: #2db34a;
+  transition-property: background;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.list-group-item:hover {
+  background: #31b0d5;
+}
+
+.list-group-item:active {
+  background: #286090;
+}

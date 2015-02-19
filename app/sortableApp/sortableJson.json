@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Alfreds Futterkiste",
+    "city": "Berlin",
+    "country": "Germany",
+    "number": "1"
+  },
+  {
+    "name": "Berglunds snabbköp",
+    "city": "Luleå",
+    "country": "Sweden",
+    "number": "2"
+  },
+  {
+    "name": "Centro comercial Moctezuma",
+    "city": "México D.F.",
+    "country": "Mexico",
+    "number": "3"
+  },
+  {
+    "name": "Ernst Handel",
+    "city": "Graz",
+    "country": "Austria",
+    "number": "4"
+  },
+  {
+    "name": "FISSA Fabrica Inter. Salchichas S.A.",
+    "city": "Madrid",
+    "country": "Spain",
+    "number": "5"
+  },
+  {
+    "name": "Galería del gastrónomo",
+    "city": "Barcelona",
+    "country": "Spain",
+    "number": "6"
+  },
+  {
+    "name": "Island Trading",
+    "city": "Cowes",
+    "country": "UK",
+    "number": "7"
+  },
+  {
+    "name": "Königlich Essen",
+    "city": "Brandenburg",
+    "country": "Germany",
+    "number": "8"
+  },
+  {
+    "name": "Laughing Bacchus Wine Cellars",
+    "city": "Vancouver",
+    "country": "Canada",
+    "number": "9"
+  },
+  {
+    "name": "Magazzini Alimentari Riuniti",
+    "city": "Bergamo",
+    "country": "Italy",
+    "number": "10"
+  }
+]

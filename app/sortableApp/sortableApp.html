@@ -5,7 +5,7 @@
       <div class="col-md-4 col-md-offset-4">
         <ul class="list-group" ui-sortable="sortableOptions" ng-model="list">
           <li ng-repeat="item in list" class="list-group-item">
-             Item no - <span class="badge">{{item.number}}</span>
+             {{ item.name }} - <span class="badge">{{item.number}}</span>
           </li>
         </ul>
       </div>
