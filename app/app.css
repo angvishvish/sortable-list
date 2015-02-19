@@ -64,3 +64,19 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.add-new-task {
+  float: right;
+  color: white;
+  right: 0;
+  border-radius: 50%;
+  background-color: lightgreen;
+  height: 125px;
+  width: 125px;
+}
+
+.add-new-task strong {
+  line-height: 125px;
+  text-align: center;
+  padding-left: 15px;
+}
