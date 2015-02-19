@@ -2,7 +2,9 @@
 
 angular.module('angularApp.sortableApp', [
   'ngRoute',
-  'ui.sortable'
+  'xeditable',
+  'ui.sortable',
+  'ui.bootstrap'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -14,10 +16,11 @@ angular.module('angularApp.sortableApp', [
 
 .controller(
   'sortableAppCtrl',[
-  '$scope', '$http',
-  function($scope, $http) {
+  '$scope', '$http', '$modal',
+  function($scope, $http, $modal) {
 
-    // grabbing the categories
+    $scope.docs = [];
+
     $http.get('sortableApp/sortableDays.json').success(function(data) {
        $scope.docs = data;
     });
@@ -25,6 +28,32 @@ angular.module('angularApp.sortableApp', [
     $scope.sortableOptions = {
       placeholder: "app",
       connectWith: ".apps-container"
+    };
+
+    $scope.addTask = function () {
+      var modalInstance = $modal.open({
+        templateUrl: '/app/sortableApp/add-task.html',
+        controller: 'addTaskCtrl',
+        resolve: {
+          docs: function () {
+            return $scope.docs;
+          }
+        }
+      });
+    };
+  }
+])
+
+.controller(
+  'addTaskCtrl', [
+  '$scope', '$modalInstance', 'docs',
+  function($scope, $modalInstance, docs) {
+    $scope.addTask = function (task) {
+      task.number = docs[0].tasks.length;
+      task.description = "--";
+
+      docs[0].tasks.push(task);
+      $modalInstance.dismiss('cancel');
     };
   }
 ]);

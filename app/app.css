@@ -1,12 +1,29 @@
 /* app css stylesheet */
 
-.list-group > li.task:hover {
-  cursor: all-scroll;
+.list-group > li.task:active {
+  cursor: -webkit-grabbing;
+}
+
+.list-group > li.task.no-task:hover {
+  cursor: no-drop;
+}
+
+.list-group > li.task.no-task:active {
+  cursor: no-drop;
+}
+
+
+.list-group-item.high {
+  background-color: #F4CBCA;
+}
+
+.list-group-item.low {
+  background-color: #FAE6CA;
 }
 
 .list-group-item.task {
   transition-property: background;
-  transition-duration: .5s;
+  transition-duration: 250ms;
   transition-timing-function: linear;
 }
 
@@ -18,12 +35,48 @@
   background: #31b0d5;
 }
 
-.list-group-item.task:active {
-  background: #5cb85c;
-}
-
 .app {
   list-style: none;
   min-height: 40px;
-  background-color: white;
+  background-color: lightgray;
+}
+
+
+div.editable-click, a.editable-click {
+  color: black;
+  border-bottom: none;
+}
+
+div.editable-click:hover, a.editable-click:hover {
+  color: black;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-new-task {
+  float: right;
+  color: white;
+  right: 0;
+  border-radius: 50%;
+  background-color: lightgreen;
+  height: 125px;
+  width: 125px;
+}
+
+.add-new-task strong {
+  line-height: 125px;
+  text-align: center;
+  padding-left: 15px;
 }

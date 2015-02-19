@@ -6,21 +6,29 @@
         <div class="row">
           <h2>Sortable list</h2>
           <ul class="list-inline" ng-model="docs">
-            <li class="col-md-2" ng-repeat="day in docs">
-               <h6>{{ day.categorie }} <span class="badge">{{ day.tasks.length }}</span></h6>
-               <ul class="list-group apps-container" ui-sortable="sortableOptions" ng-model="day.tasks">
-                 <li class="list-group-item task app" ng-repeat="task in day.tasks">
-                    {{ task.title }}
+
+            <li class="col-md-2 col-xs-6" ng-repeat="day in docs">
+               <h4>
+                {{ day.categorie }} <span class="label label-info pull-right">{{ day.tasks.length }}</span>
+               </h4>
+
+               <ul class="list-group apps-container"
+                   ui-sortable="sortableOptions"
+                   ng-model="day.tasks">
+                 <li class="list-group-item task app {{ task.importance }}"
+                     ng-repeat="task in day.tasks">
+                    <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
                  </li>
-                 <li class="list-group-item task app" ng-if="day.tasks.length === 0">
-                    No tasks
+                 <li class="list-group-item task app no-task"
+                     ng-if="day.tasks.length === 0">No tasks
                  </li>
                </ul>
             </li>
+
           </ul>
         </div>
       </section>
-
+      <a class="add-new-task" href="" ng-click="addTask()"><strong>Add new task</strong></a>
     </div>
   </div>
 </div>
