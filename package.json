@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "SortableApp",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.0.1",
+  "description": "A angular js project to sort a list",
+  "repository": "https://github.com/angvishvish/sortable-list",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
