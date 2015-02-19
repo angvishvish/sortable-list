@@ -7,12 +7,15 @@
           <h2>Sortable list</h2>
           <ul class="list-inline" ng-model="docs">
             <li class="col-md-2" ng-repeat="day in docs">
-               <h6>{{ day.categorie }} <span class="badge">{{ day.tasks.length }}</span></h6>
+               <h4>{{ day.categorie }} <span class="label label-info">{{ day.tasks.length }}</span></h4>
                <ul class="list-group apps-container"
                    ui-sortable="sortableOptions"
                    ng-model="day.tasks">
                  <li class="list-group-item task app {{ task.importance }}"
-                     ng-repeat="task in day.tasks">{{ task.title }}
+                     ng-repeat="task in day.tasks">
+                     <div>
+                      <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
+                    </div>
                  </li>
                  <li class="list-group-item task app no-task"
                      ng-if="day.tasks.length === 0">No tasks
