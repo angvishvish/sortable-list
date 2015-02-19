@@ -1,17 +1,53 @@
 [
   {
-    "categorie": "Today"
+    "categorie": "Today",
+    "tasks": [
+      {
+        "title": "Alfreds Futterkiste",
+        "importance": "Berlin",
+        "description": "Germany",
+        "number": "1"
+      },
+      {
+        "title": "Berglunds snabbköp",
+        "importance": "Luleå",
+        "description": "Sweden",
+        "number": "2"
+      },
+      {
+        "title": "Centro comercial Moctezuma",
+        "importance": "México D.F.",
+        "description": "Mexico",
+        "number": "3"
+      },
+      {
+        "title": "Ernst Handel",
+        "importance": "Graz",
+        "description": "Austria",
+        "number": "4"
+      },
+      {
+        "title": "FISSA Fabrica Inter. Salchichas S.A.",
+        "importance": "Madrid",
+        "description": "Spain",
+        "number": "5"
+      }
+    ]
   },
   {
-    "categorie": "Daily"
+    "categorie": "Daily",
+    "tasks": []
   },
   {
-    "categorie": "Weekend"
+    "categorie": "Weekend",
+    "tasks": []
   },
   {
-    "categorie": "To be planned"
+    "categorie": "To be planned",
+    "tasks": []
   },
   {
-    "categorie": "Done"
+    "categorie": "Done",
+    "tasks": []
   }
 ]

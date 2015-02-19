@@ -18,6 +18,6 @@
   background: #31b0d5;
 }
 
-.list-group-item:active {
-  background: #286090;
+.list-group-item.task:active {
+  background: #5cb85c;
 }

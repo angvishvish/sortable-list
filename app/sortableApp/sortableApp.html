@@ -12,8 +12,8 @@
 
       <section class="col-md-8 col-xs-6">
         <ul class="list-group" ui-sortable="sortableOptions" ng-model="list">
-          <li ng-repeat="item in list" class="list-group-item task">
-             {{ item.title }} - <span class="badge">{{item.number}}</span>
+          <li ng-repeat="task in days[0].tasks" class="list-group-item task">
+             {{ task.title }} - <span class="badge">{{ task.number}}</span>
           </li>
         </ul>
       </section>

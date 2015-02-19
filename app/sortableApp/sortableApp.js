@@ -17,13 +17,7 @@ angular.module('angularApp.sortableApp', [
   '$scope', '$http',
   function($scope, $http) {
 
-    // create the list first
-
-    $http.get('sortableApp/sortableJson.json').success(function(data) {
-       $scope.list = data;
-    });
-
-    // grabbing the days
+    // grabbing the categories
     $http.get('sortableApp/sortableDays.json').success(function(data) {
        $scope.days = data;
     });
