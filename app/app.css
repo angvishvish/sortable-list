@@ -21,3 +21,9 @@
 .list-group-item.task:active {
   background: #5cb85c;
 }
+
+.app {
+  list-style: none;
+  min-height: 40px;
+  background-color: white;
+}

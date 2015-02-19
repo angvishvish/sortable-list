@@ -1,22 +1,26 @@
 <div class="jumbotron">
   <div class="container">
-    <h2>Sortable list</h2>
     <div class="row">
-      <aside class="col-md-4 col-xs-6">
-        <ul class="list-group" ng-model="docs">
-          <li ng-repeat="day in docs" class="list-group-item category">
-             {{ day.categorie }}
-          </li>
-        </ul>
-      </aside>
 
-      <section class="col-md-8 col-xs-6">
-        <ul class="list-group" ui-sortable ng-model="data">
-          <li ng-repeat="task in data" class="list-group-item task">
-             {{ task.title }} - <span class="badge">{{ task.number}}</span>
-          </li>
-        </ul>
+      <section class="col-md-12">
+        <div class="row">
+          <h2>Sortable list</h2>
+          <ul class="list-inline" ng-model="docs">
+            <li class="col-md-2" ng-repeat="day in docs">
+               <h6>{{ day.categorie }} <span class="badge">{{ day.tasks.length }}</span></h6>
+               <ul class="list-group apps-container" ui-sortable="sortableOptions" ng-model="day.tasks">
+                 <li class="list-group-item task app" ng-repeat="task in day.tasks">
+                    {{ task.title }}
+                 </li>
+                 <li class="list-group-item task app" ng-if="day.tasks.length === 0">
+                    No tasks
+                 </li>
+               </ul>
+            </li>
+          </ul>
+        </div>
       </section>
+
     </div>
   </div>
 </div>

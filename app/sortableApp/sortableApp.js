@@ -22,8 +22,9 @@ angular.module('angularApp.sortableApp', [
        $scope.docs = data;
     });
 
-    $http.get('sortableApp/sortableJson.json').success(function(data) {
-       $scope.data = data;
-    });
+    $scope.sortableOptions = {
+      placeholder: "app",
+      connectWith: ".apps-container"
+    };
   }
 ]);
