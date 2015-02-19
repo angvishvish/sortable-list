@@ -19,7 +19,11 @@ angular.module('angularApp.sortableApp', [
 
     // grabbing the categories
     $http.get('sortableApp/sortableDays.json').success(function(data) {
-       $scope.days = data;
+       $scope.docs = data;
+    });
+
+    $http.get('sortableApp/sortableJson.json').success(function(data) {
+       $scope.data = data;
     });
   }
 ]);
