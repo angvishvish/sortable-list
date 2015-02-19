@@ -7,48 +7,6 @@
         "importance": "low",
         "description": "Germany",
         "number": "1"
-      },
-      {
-        "title": "Berglunds snabbköp",
-        "importance": "high",
-        "description": "Sweden",
-        "number": "2"
-      },
-      {
-        "title": "Centro comercial Moctezuma",
-        "importance": "México D.F.",
-        "description": "Mexico",
-        "number": "3"
-      },
-      {
-        "title": "Ernst Handel",
-        "importance": "Graz",
-        "description": "Austria",
-        "number": "4"
-      },
-      {
-        "title": "FISSA Fabrica Inter. Salchichas S.A.",
-        "importance": "high",
-        "description": "Spain",
-        "number": "5"
-      },
-      {
-        "title": "Galería del gastrónomo",
-        "importance": "Barcelona",
-        "description": "Spain",
-        "number": "6"
-      },
-      {
-        "title": "Island Trading",
-        "importance": "Cowes",
-        "description": "UK",
-        "number": "7"
-      },
-      {
-        "title": "Magazzini Alimentari Riuniti",
-        "importance": "Bergamo",
-        "description": "Italy",
-        "number": "10"
       }
     ]
   },
@@ -147,6 +105,48 @@
         "importance": "high",
         "description": "Germany",
         "number": "11"
+      },
+      {
+        "title": "Berglunds snabbköp",
+        "importance": "high",
+        "description": "Sweden",
+        "number": "2"
+      },
+      {
+        "title": "Centro comercial Moctezuma",
+        "importance": "México D.F.",
+        "description": "Mexico",
+        "number": "3"
+      },
+      {
+        "title": "Ernst Handel",
+        "importance": "Graz",
+        "description": "Austria",
+        "number": "4"
+      },
+      {
+        "title": "FISSA Fabrica Inter. Salchichas S.A.",
+        "importance": "high",
+        "description": "Spain",
+        "number": "5"
+      },
+      {
+        "title": "Galería del gastrónomo",
+        "importance": "Barcelona",
+        "description": "Spain",
+        "number": "6"
+      },
+      {
+        "title": "Island Trading",
+        "importance": "Cowes",
+        "description": "UK",
+        "number": "7"
+      },
+      {
+        "title": "Magazzini Alimentari Riuniti",
+        "importance": "Bergamo",
+        "description": "Italy",
+        "number": "10"
       }
     ]
   }

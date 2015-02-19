@@ -2,8 +2,9 @@
 
 angular.module('angularApp.sortableApp', [
   'ngRoute',
+  'xeditable',
   'ui.sortable',
-  'xeditable'
+  'ui.bootstrap'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -15,10 +16,11 @@ angular.module('angularApp.sortableApp', [
 
 .controller(
   'sortableAppCtrl',[
-  '$scope', '$http',
-  function($scope, $http) {
+  '$scope', '$http', '$modal',
+  function($scope, $http, $modal) {
 
-    // grabbing the categories
+    $scope.docs = [];
+
     $http.get('sortableApp/sortableDays.json').success(function(data) {
        $scope.docs = data;
     });
@@ -27,25 +29,31 @@ angular.module('angularApp.sortableApp', [
       placeholder: "app",
       connectWith: ".apps-container"
     };
+
+    $scope.addTask = function () {
+      var modalInstance = $modal.open({
+        templateUrl: '/app/sortableApp/add-task.html',
+        controller: 'addTaskCtrl',
+        resolve: {
+          docs: function () {
+            return $scope.docs;
+          }
+        }
+      });
+    };
   }
 ])
 
-.directive("contenteditable", function() {
-  return {
-    require: "ngModel",
-    link: function(scope, element, attrs, ngModel) {
+.controller(
+  'addTaskCtrl', [
+  '$scope', '$modalInstance', 'docs',
+  function($scope, $modalInstance, docs) {
+    $scope.addTask = function (task) {
+      task.number = docs[0].tasks.length;
+      task.description = "--";
 
-      function read() {
-        ngModel.$setViewValue(element.html());
-      }
-
-      ngModel.$render = function() {
-        element.html(ngModel.$viewValue || "");
-      };
-
-      element.bind("blur keyup change", function() {
-        scope.$apply(read);
-      });
-    }
-  };
-});
+      docs[0].tasks.push(task);
+      $modalInstance.dismiss('cancel');
+    };
+  }
+]);

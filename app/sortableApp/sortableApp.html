@@ -1,3 +1,6 @@
+<footer class="container">
+  <a class="btn btn-success" href="" ng-click="addTask()"><strong>Add new task</strong></a>
+</footer>
 <div class="jumbotron">
   <div class="container">
     <div class="row">
@@ -7,15 +10,16 @@
           <h2>Sortable list</h2>
           <ul class="list-inline" ng-model="docs">
             <li class="col-md-2" ng-repeat="day in docs">
-               <h4>{{ day.categorie }} <span class="label label-info">{{ day.tasks.length }}</span></h4>
+               <h4>
+                {{ day.categorie }} <span class="label label-info pull-right">{{ day.tasks.length }}</span>
+               </h4>
+
                <ul class="list-group apps-container"
                    ui-sortable="sortableOptions"
                    ng-model="day.tasks">
                  <li class="list-group-item task app {{ task.importance }}"
                      ng-repeat="task in day.tasks">
-                     <div>
-                      <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
-                    </div>
+                    <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
                  </li>
                  <li class="list-group-item task app no-task"
                      ng-if="day.tasks.length === 0">No tasks
@@ -29,3 +33,4 @@
     </div>
   </div>
 </div>
+
