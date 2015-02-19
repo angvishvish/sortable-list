@@ -1,17 +1,20 @@
 /* app css stylesheet */
 
-.list-group > li:hover {
+.list-group > li.task:hover {
   cursor: all-scroll;
 }
 
-.list-group-item {
-  background: #2db34a;
+.list-group-item.task {
   transition-property: background;
   transition-duration: .5s;
   transition-timing-function: linear;
 }
 
-.list-group-item:hover {
+.list-group-item.category:hover {
+  /*background: #31b0d5;*/
+}
+
+.list-group-item.task:hover {
   background: #31b0d5;
 }
 

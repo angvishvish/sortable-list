@@ -1,62 +1,62 @@
 [
   {
-    "name": "Alfreds Futterkiste",
-    "city": "Berlin",
-    "country": "Germany",
+    "title": "Alfreds Futterkiste",
+    "importance": "Berlin",
+    "description": "Germany",
     "number": "1"
   },
   {
-    "name": "Berglunds snabbköp",
-    "city": "Luleå",
-    "country": "Sweden",
+    "title": "Berglunds snabbköp",
+    "importance": "Luleå",
+    "description": "Sweden",
     "number": "2"
   },
   {
-    "name": "Centro comercial Moctezuma",
-    "city": "México D.F.",
-    "country": "Mexico",
+    "title": "Centro comercial Moctezuma",
+    "importance": "México D.F.",
+    "description": "Mexico",
     "number": "3"
   },
   {
-    "name": "Ernst Handel",
-    "city": "Graz",
-    "country": "Austria",
+    "title": "Ernst Handel",
+    "importance": "Graz",
+    "description": "Austria",
     "number": "4"
   },
   {
-    "name": "FISSA Fabrica Inter. Salchichas S.A.",
-    "city": "Madrid",
-    "country": "Spain",
+    "title": "FISSA Fabrica Inter. Salchichas S.A.",
+    "importance": "Madrid",
+    "description": "Spain",
     "number": "5"
   },
   {
-    "name": "Galería del gastrónomo",
-    "city": "Barcelona",
-    "country": "Spain",
+    "title": "Galería del gastrónomo",
+    "importance": "Barcelona",
+    "description": "Spain",
     "number": "6"
   },
   {
-    "name": "Island Trading",
-    "city": "Cowes",
-    "country": "UK",
+    "title": "Island Trading",
+    "importance": "Cowes",
+    "description": "UK",
     "number": "7"
   },
   {
-    "name": "Königlich Essen",
-    "city": "Brandenburg",
-    "country": "Germany",
+    "title": "Königlich Essen",
+    "importance": "Brandenburg",
+    "description": "Germany",
     "number": "8"
   },
   {
-    "name": "Laughing Bacchus Wine Cellars",
-    "city": "Vancouver",
-    "country": "Canada",
+    "title": "Laughing Bacchus Wine Cellars",
+    "importance": "Vancouver",
+    "description": "Canada",
     "number": "9"
   },
   {
-    "name": "Magazzini Alimentari Riuniti",
-    "city": "Bergamo",
-    "country": "Italy",
+    "title": "Magazzini Alimentari Riuniti",
+    "importance": "Bergamo",
+    "description": "Italy",
     "number": "10"
   }
 ]

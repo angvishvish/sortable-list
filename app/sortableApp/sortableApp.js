@@ -22,5 +22,10 @@ angular.module('angularApp.sortableApp', [
     $http.get('sortableApp/sortableJson.json').success(function(data) {
        $scope.list = data;
     });
+
+    // grabbing the days
+    $http.get('sortableApp/sortableDays.json').success(function(data) {
+       $scope.days = data;
+    });
   }
 ]);
