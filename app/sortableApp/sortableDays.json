@@ -3,7 +3,7 @@
     "categorie": "Today",
     "tasks": [
       {
-        "title": "Alfreds Futterkiste",
+        "title": "Fill up the form",
         "importance": "low",
         "description": "Germany",
         "number": "1"
@@ -14,25 +14,25 @@
     "categorie": "Daily",
     "tasks": [
       {
-        "title": "Alfreds Futterkiste",
+        "title": "Polish the shoes",
         "importance": "high",
         "description": "Germany",
         "number": "11"
       },
       {
-        "title": "Berglunds snabbköp",
+        "title": "Wash the car",
         "importance": "Luleå",
         "description": "Sweden",
         "number": "12"
       },
       {
-        "title": "Centro comercial Moctezuma",
+        "title": "Repair the laptop",
         "importance": "México D.F.",
         "description": "Mexico",
         "number": "13"
       },
       {
-        "title": "Ernst Handel",
+        "title": "Fill the jug",
         "importance": "Graz",
         "description": "Austria",
         "number": "14"
@@ -66,19 +66,19 @@
     "categorie": "To be planned",
     "tasks": [
       {
-        "title": "Alfreds Futterkiste",
+        "title": "Fill petrol",
         "importance": "Berlin",
         "description": "Germany",
         "number": "11"
       },
       {
-        "title": "Berglunds snabbköp",
+        "title": "Buy a phone",
         "importance": "low",
         "description": "Sweden",
         "number": "12"
       },
       {
-        "title": "Centro comercial Moctezuma",
+        "title": "Go to gym",
         "importance": "México D.F.",
         "description": "Mexico",
         "number": "13"
@@ -95,13 +95,13 @@
     "categorie": "Done",
     "tasks": [
       {
-        "title": "Alfreds Futterkiste",
+        "title": "Buy new slippers",
         "importance": "low",
         "description": "Germany",
         "number": "11"
       },
       {
-        "title": "Alfreds Futterkiste",
+        "title": "Write a song",
         "importance": "high",
         "description": "Germany",
         "number": "11"
@@ -113,40 +113,10 @@
         "number": "2"
       },
       {
-        "title": "Centro comercial Moctezuma",
+        "title": "Make a dish",
         "importance": "México D.F.",
         "description": "Mexico",
         "number": "3"
-      },
-      {
-        "title": "Ernst Handel",
-        "importance": "Graz",
-        "description": "Austria",
-        "number": "4"
-      },
-      {
-        "title": "FISSA Fabrica Inter. Salchichas S.A.",
-        "importance": "high",
-        "description": "Spain",
-        "number": "5"
-      },
-      {
-        "title": "Galería del gastrónomo",
-        "importance": "Barcelona",
-        "description": "Spain",
-        "number": "6"
-      },
-      {
-        "title": "Island Trading",
-        "importance": "Cowes",
-        "description": "UK",
-        "number": "7"
-      },
-      {
-        "title": "Magazzini Alimentari Riuniti",
-        "importance": "Bergamo",
-        "description": "Italy",
-        "number": "10"
       }
     ]
   },
