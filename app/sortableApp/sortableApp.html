@@ -5,9 +5,9 @@
       <section class="col-md-12">
         <div class="row">
           <h2>Sortable list</h2>
-          <ul class="list-inline" ng-model="docs">
+          <ul class="list-inline" ng-model="docs" ng-repeat="day in docs">
 
-            <li class="col-md-2 col-xs-6" ng-repeat="day in docs">
+            <li class="col-md-2 col-xs-6" ng-if="day.categorie !== 'Delete'">
                <h4>
                 {{ day.categorie }} <span class="label label-info pull-right">{{ day.tasks.length }}</span>
                </h4>
@@ -24,11 +24,30 @@
                  </li>
                </ul>
             </li>
+            <li class="col-md-4 col-md-offset-4" ng-if="day.categorie === 'Delete'">
+              <h4>
+                {{ day.categorie }}
+              </h4>
+              <ul class="list-group apps-container"
+                   ui-sortable="sortableOptions"
+                   ng-model="day.tasks">
+                 <li class="list-group-item task app {{ task.importance }} deleted"
+                     ng-repeat="task in day.tasks">
+                    <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
+                 </li>
+                 <li class="list-group-item task app no-task deleted"
+                     ng-if="day.tasks.length === 0">Drag task to delete
+                 </li>
+               </ul>
+            </li>
 
           </ul>
         </div>
       </section>
-      <a class="add-new-task" href="" ng-click="addTask()"><strong>Add new task</strong></a>
+
     </div>
   </div>
 </div>
+
+<a class="add-new-task" href="" ng-click="addTask()"><strong>Add new task</strong></a>
+

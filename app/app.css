@@ -21,6 +21,10 @@
   background-color: #FAE6CA;
 }
 
+.list-group-item.deleted {
+  text-decoration: line-through;
+}
+
 .list-group-item.task {
   transition-property: background;
   transition-duration: 250ms;
@@ -66,9 +70,11 @@ input {
 }
 
 .add-new-task {
-  float: right;
+  position: fixed;
   color: white;
+  bottom: 0;
   right: 0;
+  margin: 10px;
   border-radius: 50%;
   background-color: lightgreen;
   height: 125px;
