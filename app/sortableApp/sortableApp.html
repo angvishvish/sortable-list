@@ -19,7 +19,7 @@
                      ng-repeat="task in day.tasks">
                     <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
                  </li>
-                 <li class="list-group-item task app no-task"
+                 <li class="list-group-item task app no-task disabled"
                      ng-if="day.tasks.length === 0">No tasks
                  </li>
                </ul>
@@ -36,7 +36,7 @@
                        ng-repeat="task in day.tasks">
                       <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
                    </li>
-                   <li class="list-group-item task app no-task deleted"
+                   <li class="list-group-item task app no-task deleted disabled"
                        ng-if="day.tasks.length === 0">Drag task to delete
                    </li>
                  </ul>

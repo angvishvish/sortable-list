@@ -4,6 +4,7 @@ angular.module('angularApp.sortableApp', [
   'ngRoute',
   'xeditable',
   'ui.sortable',
+  'ui.bootstrap.tpls',
   'ui.bootstrap'
 ])
 
