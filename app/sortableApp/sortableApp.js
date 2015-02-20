@@ -41,6 +41,12 @@ angular.module('angularApp.sortableApp', [
         }
       });
     };
+
+    $scope.dropzoneFields = [];
+
+    $scope.draggable = {
+      connectWith: ".dropzone"
+    };
   }
 ])
 
