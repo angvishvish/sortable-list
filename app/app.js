@@ -4,7 +4,8 @@
 angular.module('angularApp', [
   'ngRoute',
   'angularApp.sortableApp'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/sortableApp'});
 }]);

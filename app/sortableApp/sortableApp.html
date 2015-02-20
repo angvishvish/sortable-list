@@ -24,21 +24,23 @@
                  </li>
                </ul>
             </li>
-            <li class="col-md-4 col-md-offset-4" ng-if="day.categorie === 'Delete'">
-              <h4>
-                {{ day.categorie }}
-              </h4>
-              <ul class="list-group apps-container"
-                   ui-sortable="sortableOptions"
-                   ng-model="day.tasks">
-                 <li class="list-group-item task app {{ task.importance }} deleted"
-                     ng-repeat="task in day.tasks">
-                    <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
-                 </li>
-                 <li class="list-group-item task app no-task deleted"
-                     ng-if="day.tasks.length === 0">Drag task to delete
-                 </li>
-               </ul>
+            <li class="col-md-12" ng-if="day.categorie === 'Delete'">
+              <div class="col-md-4 col-md-offset-4">
+                <h4>
+                  {{ day.categorie }}
+                </h4>
+                <ul class="list-group apps-container"
+                     ui-sortable="sortableOptions"
+                     ng-model="day.tasks">
+                   <li class="list-group-item task app {{ task.importance }} deleted"
+                       ng-repeat="task in day.tasks">
+                      <div href="#" editable-text="task.title" buttons="no">{{ task.title || 'empty' }}</div>
+                   </li>
+                   <li class="list-group-item task app no-task deleted"
+                       ng-if="day.tasks.length === 0">Drag task to delete
+                   </li>
+                 </ul>
+              </div>
             </li>
 
           </ul>
