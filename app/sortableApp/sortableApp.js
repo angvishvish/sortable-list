@@ -33,7 +33,7 @@ angular.module('angularApp.sortableApp', [
 
     $scope.addTask = function () {
       var modalInstance = $modal.open({
-        templateUrl: 'sortable-list/app/sortableApp/app/sortableApp/add-task.html',
+        templateUrl: '/sortableApp/app/sortableApp/add-task.html',
         controller: 'addTaskCtrl',
         resolve: {
           docs: function () {
