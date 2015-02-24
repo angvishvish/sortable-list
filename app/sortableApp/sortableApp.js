@@ -22,19 +22,18 @@ angular.module('angularApp.sortableApp', [
   function($scope, $http, $modal, $localStorage) {
 
     $scope.docs = [];
+
     $scope.accessLocalStorage = $localStorage.docs;
-    if ($scope.accessLocalStorage === "undefined") {
+
+    if (!$scope.accessLocalStorage.length) {
       $http.get('sortableApp/sortableDays.json').success(function(data) {
          $scope.docs = data;
          $localStorage.docs = $scope.docs;
       });
-
     }
     else {
       $scope.docs = $scope.accessLocalStorage;
     }
-    // $scope.accessLocalStorage = window.localStorage['sortable-list'];
-    // console.log($scope.accessLocalStorage);
 
     $scope.sortableOptions = {
       placeholder: "app",
