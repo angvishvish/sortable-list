@@ -5,7 +5,8 @@ angular.module('angularApp.sortableApp', [
   'xeditable',
   'ui.sortable',
   'ui.bootstrap.tpls',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngStorage'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -17,14 +18,23 @@ angular.module('angularApp.sortableApp', [
 
 .controller(
   'sortableAppCtrl',[
-  '$scope', '$http', '$modal',
-  function($scope, $http, $modal) {
+  '$scope', '$http', '$modal', '$localStorage',
+  function($scope, $http, $modal, $localStorage) {
 
     $scope.docs = [];
+    $scope.accessLocalStorage = $localStorage.docs;
+    if ($scope.accessLocalStorage === "undefined") {
+      $http.get('sortableApp/sortableDays.json').success(function(data) {
+         $scope.docs = data;
+         $localStorage.docs = $scope.docs;
+      });
 
-    $http.get('sortableApp/sortableDays.json').success(function(data) {
-       $scope.docs = data;
-    });
+    }
+    else {
+      $scope.docs = $scope.accessLocalStorage;
+    }
+    // $scope.accessLocalStorage = window.localStorage['sortable-list'];
+    // console.log($scope.accessLocalStorage);
 
     $scope.sortableOptions = {
       placeholder: "app",
