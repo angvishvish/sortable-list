@@ -25,7 +25,7 @@ angular.module('angularApp.sortableApp', [
 
     $scope.accessLocalStorage = $localStorage.docs;
 
-    if (!$scope.accessLocalStorage.length) {
+    if ($scope.accessLocalStorage != "") {
       $http.get('sortableApp/sortableDays.json').success(function(data) {
          $scope.docs = data;
          $localStorage.docs = $scope.docs;
