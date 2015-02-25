@@ -66,6 +66,7 @@ angular.module('angularApp.sortableApp', [
   function($scope, $modalInstance, docs) {
     $scope.addTask = function (task) {
 
+      docs = docs || [];
       task.number = docs[0].tasks.length;
       docs[0].tasks.push(task);
       $modalInstance.dismiss('cancel');
