@@ -23,17 +23,17 @@ angular.module('angularApp.sortableApp', [
 
     $scope.docs = [];
 
-    // $scope.accessLocalStorage = $localStorage.docs;
+    $scope.accessLocalStorage = $localStorage.docs;
 
-    // if ($scope.accessLocalStorage == "") {
+    if (!$scope.accessLocalStorage) {
       $http.get('sortableApp/sortableDays.json').success(function(data) {
          $scope.docs = data;
          $localStorage.docs = $scope.docs;
       });
-    // }
-    // else {
-    //   $scope.docs = $scope.accessLocalStorage;
-    // }
+    }
+    else {
+      $scope.docs = $scope.accessLocalStorage;
+    }
 
     $scope.sortableOptions = {
       placeholder: "app",
